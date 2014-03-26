@@ -1,0 +1,172 @@
+/**
+ * Default DropKick theme
+ *
+ * Feel free to edit the default theme
+ * or even add your own.
+ *
+ * See the readme for themeing help
+ *
+*/
+
+@glow: lighten(@pop, 15%);
+
+.dk_container {
+	background-color:#fff;
+	font-family:@font;
+	&:focus {
+		outline:0;
+	}
+	a {
+		cursor:pointer;
+		text-decoration:none;
+	}
+}
+
+.dk_toggle {
+	border: 1px solid @linecolor;
+	color: @color;
+	padding: 7px 45px 7px 10px;
+	text-shadow: #fff 1px 1px 0;
+	position: relative;
+	&:hover,
+	&:focus {
+		border-color:darken(@linecolor, 5%);
+	}
+	&:after {
+		position: absolute;
+		top: 45%;
+		right: 10px;
+		content: '';
+		border-left: 5px solid transparent;
+		border-right: 5px solid transparent;
+		border-top: 5px solid #4B4B4B;
+	}
+}
+
+.dk_focus .dk_toggle {
+	border-color: @glow;
+	-webkit-box-shadow:0 0 5px @glow;
+	-moz-box-shadow:0 0 5px @glow;
+	-ms-box-shadow:0 0 5px @glow;
+	box-shadow:0 0 5px @glow;
+}
+.dk_open {
+	-webkit-box-shadow:0 0 5px @glow;
+	-moz-box-shadow:0 0 5px @glow;
+	-ms-box-shadow:0 0 5px @glow;
+	box-shadow:0 0 5px @glow;
+	z-index: 10;
+	.dk_toggle {
+		background-color: #e6e6e6;
+		border-color: darken(@linecolor, 5%);
+		color: #ccc;
+		box-shadow: inset 0 -2px 5px #ccc;
+	}
+}
+
+.dk_options {
+	background: #fefefe;
+	-webkit-box-shadow:0 2px 8px rgba(0,0,0,0.2);
+	-moz-box-shadow:0 2px 8px rgba(0,0,0,0.2);
+	-ms-box-shadow:0 2px 8px rgba(0,0,0,0.2);
+	box-shadow:0 2px 8px rgba(0,0,0,0.2);
+	a {
+		background-color: #fff;
+		border-bottom: 1px solid @linecolor;
+		padding: 8px 10px;
+	}
+	a:hover,
+	&:focus,
+	.dk_option_current a {
+		background-color:@pop;
+		color:#fff;
+		text-decoration:none;
+	}
+	li:last-child a {
+		border-bottom:0 none;
+	}
+	.disabled {
+		cursor:default;
+		a {
+			color:#999;
+		}
+		&:hover,
+		&:hover a,
+		&:focus,
+		&:focus a {
+			cursor: default;
+			background-color:#fff;
+		}
+	}
+}
+
+.dk_options_inner {
+	max-height: 250px;
+	border: 1px solid @linecolor;
+	border-bottom-width: 2px;
+	border-bottom-color: #999;
+	color: @color;
+}
+
+.dk_container {
+	display: none;
+	float: left;
+	a {
+		outline: 0;
+	}
+}
+
+.dk_toggle {
+	display: inline-block;
+	position: relative;
+	zoom: 1;
+}
+
+.dk_open {
+	position: relative;
+	.dk_options {
+		display: block;
+	}
+	.dk_label {
+		color: inherit;
+	}
+}
+
+.dk_options {
+	display: none;
+	margin-top: -1px;
+	position: absolute;
+	right: 0;
+	width: 100%;
+	a {
+		display: block;
+	}
+}
+
+.dk_options_inner {
+	overflow: auto;
+	position: relative;
+	-webkit-overflow-scrolling: touch;
+}
+
+.dk_container select {
+	position: absolute;
+	top: -99999em;
+	visibility: hidden;
+}
+
+.dk_mobile {
+	position: relative;
+}
+.dk_mobile select {
+	display: block;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	visibility: visible;
+	opacity: 0;
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+}

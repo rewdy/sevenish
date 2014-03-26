@@ -1,0 +1,261 @@
+/**
+ * @file
+ * Sevenish
+ * ---------
+ * Drupal admin theme
+ *
+*/
+
+@font:'Helvetica Neue', Helvetica, sans-serif;
+@pageMargin:20px;
+@lineheight:1.3em;
+
+@color:#000;
+@accent:#0074bd;
+@pop:#07bdaa;
+
+@linecolor: #ccc;
+@activeline: #e6e6e6;
+
+// Conceptual Resets
+* {
+	-webkit-border-radius:0!important;
+	-moz-border-radius:0!important;
+	-ms-border-radius:0!important;
+	border-radius:0!important;
+}
+
+// Minor tweaks
+body {
+	color:@color;
+	font-family: @font;
+	font-size:15px;
+	line-height:@lineheight;
+}
+#branding {
+	padding:@pageMargin @pageMargin 0 @pageMargin;
+	background-color:#e6e6e6;
+	h1.page-title {
+		font-weight:bold;
+		line-height:1.5em;
+	}
+	.breadcrumb {
+		opacity:0.2;
+		.transition;
+	}
+	&:hover .breadcrumb {
+		opacity:1;
+	}
+}
+#page {
+	margin-left:@pageMargin;
+	margin-right:@pageMargin;
+}
+
+// Elements
+table tr:hover td {
+	background-color:#e2eff7;
+}
+ul.secondary {
+	li a, 
+	li a:hover, 
+	li.active a, 
+	li.active a.active {
+		padding:4px 10px;
+	}
+}
+ul.action-links {
+	padding:0;
+	li {
+		padding:0;
+		a {
+			display:inline-block;
+			padding:0.5em 1em;
+			border:2px solid #fff;
+			background:none @pop;
+			color:#fff;
+			text-decoration:none;
+			line-height:@lineheight;
+			&:before {
+				content: "+";
+				display:inline-block;
+				margin-right:0.5em;
+				font-size:1.3em;
+				line-height:0.8em;
+			}
+			&:hover {
+				background-color:lighten(@pop, 5%);
+				-webkit-box-shadow:inset 0 0 10px rgba(0,0,0,0.1);
+				-moz-box-shadow:inset 0 0 10px rgba(0,0,0,0.1);
+				-ms-box-shadow:inset 0 0 10px rgba(0,0,0,0.1);
+				box-shadow:inset 0 0 10px rgba(0,0,0,0.1);
+			}
+			&:active,
+			&:focus {
+				background-color:darken(@pop, 7%);
+				border-color:@activeline;
+			}
+		}
+	}
+}
+
+// CKEditor page padding
+body.cke_editable {
+	padding:10px;
+	p {
+		margin:0 0 1.5em 0;
+	}
+}
+
+// forms
+.views-exposed-form {
+	padding:0 15px;
+	border:1px solid @linecolor;
+}
+.form-actions {
+	padding-top:20px;
+	border-top:1px solid @linecolor;
+}
+input.form-submit,
+a.button {
+	position:relative;
+	left:-2px;
+	padding:0.5em 1em;
+	font-family:@font;
+	color:#fff;
+	background:@accent;
+	border:2px solid #fff;
+	&:hover {
+		background-color:lighten(@accent, 5%);
+		-webkit-box-shadow:inset 0 0 10px rgba(0,0,0,0.1);
+		-moz-box-shadow:inset 0 0 10px rgba(0,0,0,0.1);
+		-ms-box-shadow:inset 0 0 10px rgba(0,0,0,0.1);
+		box-shadow:inset 0 0 10px rgba(0,0,0,0.1);
+	}
+	&:active,
+	&:focus {
+		background-color:darken(@accent, 7%);
+		border-color:@activeline;
+		outline:none;
+	}
+}
+input,
+textarea,
+select {
+	.border-box;
+}
+input.form-autocomplete, 
+input.form-text, 
+input.form-file, 
+textarea.form-textarea, 
+select.form-select {
+	padding:5px;
+	color:#666;
+	font-family:@font;
+	font-size:1em;
+}
+select.form-select {
+	cursor:pointer;
+}
+.custom-select {
+	max-width:100%;
+	display:inline-block;
+	position:relative;
+	.border-box;
+	select.form-select {
+		width:100%;
+		padding:5px 22px 5px 5px;
+		-webkit-appearance:none;
+		-moz-appearance:none;
+		-ms-appearance:none;
+		appearance:none;
+	}
+	&:after {
+		content:'\25BE';
+		position:absolute;
+		color:#777;
+		right:0;
+		top:50%;
+		padding:0 5px;
+		border-left:1px solid @linecolor;
+		-webkit-transform:translateY(-50%);
+		-moz-transform:translateY(-50%);
+		-ms-transform:translateY(-50%);
+		transform:translateY(-50%);
+	}
+}
+html.js input.form-autocomplete {
+	background-position: 100% 8px;
+	&.throbbing {
+		background-position: 100% -12px
+	}
+}
+
+// Alerts and messages
+@statuscolor: #d5edaf;
+@warningcolor: #fdf9be;
+@errorcolor: #fdbec2;
+div.status, div.warning, div.error, div.messages {
+	padding:0.4em 0.8em;
+	margin:0 0 1em 0;
+	background-color: #e6e6e6;
+	background-image: none;
+	border-width:0;
+	text-align:center;
+	position:relative;
+}
+div.messages a.closer {
+	position:absolute;
+	right:0.6em;
+	top:0.3em;
+	display:block;
+	font-weight:bold;
+	text-decoration:none;
+}
+div.messages ul {
+	margin:0;
+}
+div.status {
+	background-color: @statuscolor;
+	color: darken(@statuscolor, 60%);
+}
+div.warning {
+	background-color: @warningcolor;
+}
+div.error {
+	background-color: @errorcolor;
+	color: darken(@errorcolor, 60%);
+}
+
+@import "parts/dropkick";
+
+// Admin tool bar modifications
+#admin-menu {
+	background:#222;
+	font-family:@font;
+	font-size:16px;
+	font-weight:300;
+	-webkit-box-shadow:none;
+	-moz-box-shadow:none;
+	box-shadow:none;
+	.dropdown .admin-menu-toolbar-category > a.active-trail {
+		background:#666 none;
+	}
+	li.admin-menu-account > a {
+		background:#be4444 none;
+	}
+}
+
+// mixies
+.border-box {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	box-sizing:border-box;
+}
+.transition {
+	-webkit-transition:all 0.3s;
+	-moz-transition:all 0.3s;
+	-ms-transition:all 0.3s;
+	transition:all 0.3s;
+}
