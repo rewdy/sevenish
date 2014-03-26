@@ -31,6 +31,10 @@ body {
 	font-family: @font;
 	font-size:15px;
 	line-height:@lineheight;
+	// -webkit-font-smoothing:antialiased;
+	// -moz-font-smoothing:antialiased;
+	// -ms-font-smoothing:antialiased;
+	// font-smoothing:antialiased;
 }
 #branding {
 	padding:@pageMargin @pageMargin 0 @pageMargin;
@@ -113,6 +117,7 @@ body.cke_editable {
 	border:1px solid @linecolor;
 }
 .form-actions {
+	margin-bottom:0;
 	padding-top:20px;
 	border-top:1px solid @linecolor;
 }

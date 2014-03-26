@@ -11,7 +11,7 @@ ul.action-links li a:hover{background-color:#08d6c0;-webkit-box-shadow:inset 0 0
 ul.action-links li a:active,ul.action-links li a:focus{background-color:#069b8b;border-color:#e6e6e6}
 body.cke_editable{padding:10px}body.cke_editable p{margin:0 0 1.5em 0}
 .views-exposed-form{padding:0 15px;border:1px solid #ccc}
-.form-actions{padding-top:20px;border-top:1px solid #ccc}
+.form-actions{margin-bottom:0;padding-top:20px;border-top:1px solid #ccc}
 input.form-submit,a.button{position:relative;left:-2px;padding:.5em 1em;font-family:'Helvetica Neue',Helvetica,sans-serif;color:#fff;background:#0074bd;border:2px solid #fff}input.form-submit:hover,a.button:hover{background-color:#0084d7;-webkit-box-shadow:inset 0 0 10px rgba(0,0,0,0.1);-moz-box-shadow:inset 0 0 10px rgba(0,0,0,0.1);-ms-box-shadow:inset 0 0 10px rgba(0,0,0,0.1);box-shadow:inset 0 0 10px rgba(0,0,0,0.1)}
 input.form-submit:active,a.button:active,input.form-submit:focus,a.button:focus{background-color:#005e99;border-color:#e6e6e6;outline:none}
 input,textarea,select{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box}
