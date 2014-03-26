@@ -9,7 +9,6 @@ base theme = seven
 stylesheets[screen][] = sevenish.css
 
 ; SCRIPTS
-;scripts[] = js/jquery.dropkick-min.js
 scripts[] = js/sevenish.js
 
 ; REGIONS
