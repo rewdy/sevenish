@@ -65,7 +65,7 @@ ul.action-links {
 			display:inline-block;
 			padding:0.5em 1em;
 			border:2px solid #fff;
-			background:none @pop;
+			background:@pop none;
 			color:#fff;
 			text-decoration:none;
 			line-height:@lineheight;
@@ -91,6 +91,13 @@ ul.action-links {
 		}
 	}
 }
+
+table ul.action-links li a {
+	padding:0.5em 0.8em !important;
+	border:0 none;
+	background-color:@pop !important;
+}
+
 
 // CKEditor page padding
 body.cke_editable {
