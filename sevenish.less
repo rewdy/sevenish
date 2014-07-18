@@ -18,12 +18,12 @@
 @activeline: #e6e6e6;
 
 // Conceptual Resets
-* {
-	-webkit-border-radius:0!important;
-	-moz-border-radius:0!important;
-	-ms-border-radius:0!important;
-	border-radius:0!important;
-}
+// * {
+// 	-webkit-border-radius:0!important;
+// 	-moz-border-radius:0!important;
+// 	-ms-border-radius:0!important;
+// 	border-radius:0!important;
+// }
 
 // Minor tweaks
 body {
@@ -31,10 +31,6 @@ body {
 	font-family: @font;
 	font-size:15px;
 	line-height:@lineheight;
-	// -webkit-font-smoothing:antialiased;
-	// -moz-font-smoothing:antialiased;
-	// -ms-font-smoothing:antialiased;
-	// font-smoothing:antialiased;
 }
 #branding {
 	padding:@pageMargin @pageMargin 0 @pageMargin;
@@ -42,13 +38,6 @@ body {
 	h1.page-title {
 		font-weight:bold;
 		line-height:1.5em;
-	}
-	.breadcrumb {
-		opacity:0.2;
-		.transition;
-	}
-	&:hover .breadcrumb {
-		opacity:1;
 	}
 }
 #page {
@@ -168,7 +157,7 @@ select.form-select {
 	position:relative;
 	.border-box;
 	select.form-select {
-		width:100%;
+		// width:100%;
 		padding:5px 22px 5px 5px;
 		-webkit-appearance:none;
 		-moz-appearance:none;
@@ -219,6 +208,14 @@ div.messages a.closer {
 }
 div.messages ul {
 	margin:0;
+	li {
+		list-style:none;
+		+ li {
+			margin-top:0.5em;
+			padding-top:0.5em;
+			border-top:1px solid fade(#000, 30%);
+		}
+	}
 }
 div.status {
 	background-color: @statuscolor;
