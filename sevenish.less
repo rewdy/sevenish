@@ -17,6 +17,8 @@
 @linecolor: #ccc;
 @activeline: #e6e6e6;
 
+@screen: #f2f2f2;
+
 // Conceptual Resets
 // * {
 // 	-webkit-border-radius:0!important;
@@ -36,6 +38,7 @@ body {
 	padding:@pageMargin @pageMargin 0 @pageMargin;
 	background-color:#e6e6e6;
 	h1.page-title {
+		margin:5px 0;
 		font-weight:bold;
 		line-height:1.5em;
 	}
@@ -151,10 +154,14 @@ input.form-text,
 input.form-file, 
 textarea.form-textarea, 
 select.form-select {
-	padding:5px;
+	padding:7px 5px;
 	color:#666;
 	font-family:@font;
 	font-size:1em;
+	background-color:@screen;
+	&:focus {
+		background-color:#fff;
+	}
 }
 select.form-select {
 	cursor:pointer;
@@ -191,6 +198,10 @@ html.js input.form-autocomplete {
 	&.throbbing {
 		background-position: 100% -12px
 	}
+}
+
+.form-item input#edit-title {
+	font-size:1.3em;
 }
 
 .media-widget .preview {
