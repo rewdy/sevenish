@@ -19,14 +19,6 @@
 
 @screen: #f2f2f2;
 
-// Conceptual Resets
-// * {
-// 	-webkit-border-radius:0!important;
-// 	-moz-border-radius:0!important;
-// 	-ms-border-radius:0!important;
-// 	border-radius:0!important;
-// }
-
 // Minor tweaks
 body {
 	color:@color;
@@ -49,6 +41,11 @@ body {
 #page {
 	margin-left:@pageMargin;
 	margin-right:@pageMargin;
+}
+
+img {
+	max-width:100%;
+	height:auto;
 }
 
 // Elements
@@ -118,11 +115,6 @@ body.cke_editable {
 	padding:0 15px;
 	border:1px solid @linecolor;
 }
-// .form-actions {
-// 	margin-bottom:0;
-// 	padding-top:20px;
-// 	border-top:1px solid @linecolor;
-// }
 input.form-submit,
 a.button:link, 
 a.button:visited {
@@ -133,6 +125,10 @@ a.button:visited {
 	color:#fff;
 	background:@accent;
 	border:2px solid #fff;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	-ms-border-radius:5px;
+	border-radius:5px;
 	&:hover {
 		background-color:lighten(@accent, 5%);
 		-webkit-box-shadow:inset 0 0 10px rgba(0,0,0,0.1);
@@ -156,12 +152,15 @@ input.form-autocomplete,
 input.form-text, 
 input.form-file, 
 textarea.form-textarea, 
-select.form-select {
+select.form-select,
+.custom-select {
 	padding:7px 5px;
 	color:#666;
 	font-family:@font;
 	font-size:1em;
 	background-color:@screen;
+	border: 1px solid @linecolor;
+	border-top-color: #999;
 	&:focus {
 		background-color:#fff;
 	}
@@ -170,45 +169,54 @@ select.form-select {
 	cursor:pointer;
 }
 .custom-select {
-	max-width:100%;
 	display:inline-block;
-	position:relative;
+	max-width:100%;
+	padding:5px;
 	.border-box;
 	select.form-select {
-		// width:100%;
-		padding:5px 22px 5px 5px;
-		-webkit-appearance:none;
-		-moz-appearance:none;
-		-ms-appearance:none;
-		appearance:none;
-	}
-	&:after {
-		content:'\25BE';
-		position:absolute;
-		color:#777;
-		right:0;
-		top:50%;
-		padding:0 5px;
-		border-left:1px solid @linecolor;
-		-webkit-transform:translateY(-50%);
-		-moz-transform:translateY(-50%);
-		-ms-transform:translateY(-50%);
-		transform:translateY(-50%);
+		margin:0;
+		padding:0;
+		background:transparent;
+		border:0 none;
 	}
 }
 html.js input.form-autocomplete {
-	background-position: 100% 8px;
+	background-image:url(img/throbber.gif);
+	background-position: 100% -7px;
 	&.throbbing {
-		background-position: 100% -12px
+		background-position: 100% -57px;
 	}
+}
+
+.form-type-checkbox label,
+.form-type-radio label {
+	cursor:pointer;
 }
 
 .form-item input#edit-title {
 	font-size:1.3em;
 }
 
+.form-type-textarea + .filter-wrapper {
+	margin-top:-19px;
+}
+
 .media-widget .preview {
 	min-height:3.5em;
+}
+
+.form-managed-file .form-file {
+	margin-right:0.5em;
+}
+
+.container-inline {
+	padding:7px 0;
+}
+
+.ajax-progress .throbber {
+	background:transparent url(img/throbber.gif) no-repeat left -63px;
+	height: 20px;
+	width: 26px;
 }
 
 // Alerts and messages
@@ -253,6 +261,30 @@ div.warning {
 div.error {
 	background-color: @errorcolor;
 	color: darken(@errorcolor, 60%);
+}
+
+.more-link,
+.more-help-link {
+	text-align:left;
+	a {
+		padding:0.25em 0.5em;
+		display:inline-block;
+		background-color:@screen;
+		border:1px solid #e6e6e6;
+		&:hover {
+			border-color:@linecolor;
+		}
+	}
+}
+.more-help-link a {
+	background-position:5px center;
+	padding-left:25px;
+}
+
+ul.pager,
+.item-list ul.pager {
+	padding:4px;
+	border:1px solid @linecolor;
 }
 
 // Admin tool bar modifications
