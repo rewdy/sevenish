@@ -12,7 +12,7 @@
 
 @color:#000;
 @accent:#0074bd;
-@pop:#07bdaa;
+@pop:#2ccc41;
 
 @linecolor: #ccc;
 @activeline: #e6e6e6;
@@ -235,11 +235,31 @@ html.js input.form-autocomplete {
 	width: 26px;
 }
 
+ul.tips, 
+div.description, 
+.form-item div.description {
+	line-height:1.5em;
+	&:before {
+		content:'?';
+		display:inline-block;
+		padding:0 0.5em;
+		margin-right:0.3em;
+		background-color:fade(@pop, 15%);
+		color:@pop;
+		line-height:1.4em;
+		font-size:0.9em;
+		font-weight:bold;
+	}
+}
+
 // Alerts and messages
 @statuscolor: #d5edaf;
 @warningcolor: #fdf9be;
 @errorcolor: #fdbec2;
-div.status, div.warning, div.error, div.messages {
+div.status, 
+div.warning, 
+div.error, 
+div.messages {
 	padding:0.4em 0.8em;
 	margin:0 0 1em 0;
 	background-color: #e6e6e6;
