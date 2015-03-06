@@ -12,7 +12,7 @@
 
 @color:#000;
 @accent:#0074bd;
-@pop:#2ccc41;
+@pop:#6dc15f;
 
 @linecolor: #ccc;
 @activeline: #e6e6e6;
@@ -49,6 +49,18 @@ img {
 }
 
 // Elements
+ul.primary li a:link, 
+ul.primary li a.active, 
+ul.primary li a:active, 
+ul.primary li a:visited, 
+ul.primary li a:hover, 
+ul.primary li.active a {
+	-webkit-border-radius:4px 4px 0 0;
+	-moz-border-radius:4px 4px 0 0;
+	-ms-border-radius:4px 4px 0 0;
+	border-radius:4px 4px 0 0;
+}
+
 table tr:hover td {
 	background-color:#e2eff7;
 }
@@ -72,6 +84,10 @@ ul.action-links {
 			color:#fff;
 			text-decoration:none;
 			line-height:@lineheight;
+			-webkit-border-radius:4px;
+			-moz-border-radius:4px;
+			-ms-border-radius:4px;
+			border-radius:4px;
 			&:before {
 				content: "+";
 				display:inline-block;
@@ -113,6 +129,7 @@ body.cke_editable {
 // forms
 .views-exposed-form {
 	padding:0 15px;
+	margin-bottom:15px;
 	border:1px solid @linecolor;
 }
 input.form-submit,
@@ -124,11 +141,11 @@ a.button:visited {
 	font-family:@font;
 	color:#fff;
 	background:@accent;
-	border:2px solid #fff;
-	-webkit-border-radius:5px;
-	-moz-border-radius:5px;
-	-ms-border-radius:5px;
-	border-radius:5px;
+	border:2px solid #fff;6dc15f
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	-ms-border-radius:4px;
+	border-radius:4px;
 	&:hover {
 		background-color:lighten(@accent, 5%);
 		-webkit-box-shadow:inset 0 0 10px rgba(0,0,0,0.1);
@@ -225,7 +242,7 @@ html.js input.form-autocomplete {
 	margin-right:0.5em;
 }
 
-.container-inline {
+div.container-inline {
 	padding:7px 0;
 }
 
