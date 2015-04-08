@@ -27,6 +27,15 @@ body {
   margin-left: 20px;
   margin-right: 20px;
 }
+#help .block .content {
+  padding: 1.5em;
+  background-color: #f2f2f2;
+  font-size: 1.2em;
+  font-style: italic;
+}
+#help .block .content p:last-child {
+  margin-bottom: 0;
+}
 img {
   max-width: 100%;
   height: auto;
