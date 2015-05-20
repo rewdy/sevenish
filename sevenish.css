@@ -230,9 +230,6 @@ html.js input.form-autocomplete.throbbing {
 .form-item input#edit-title {
   font-size: 1.3em;
 }
-.form-type-textarea + .filter-wrapper {
-  margin-top: -19px;
-}
 .media-widget .preview {
   min-height: 3.5em;
 }
