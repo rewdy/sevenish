@@ -1,15 +1,12 @@
 name = Sevenish
 description = A child-theme of the famed <em>Seven</em> that is a bit prettier.
-version = VERSION
+version = 2.0
 core = 7.x
 engine = phptemplate
 base theme = seven
 
 ; STYLESHEETS
 stylesheets[screen][] = sevenish.css
-
-; SCRIPTS
-scripts[] = js/sevenish.js
 
 ; REGIONS
 regions[content] = Content
