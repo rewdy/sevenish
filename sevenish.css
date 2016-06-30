@@ -6,7 +6,7 @@
  *
 */
 body {
-  color: #000000;
+  color: #000;
   font-family: 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 15px;
   line-height: 1.3em;
@@ -50,9 +50,6 @@ ul.primary li a:active,
 ul.primary li a:visited,
 ul.primary li a:hover,
 ul.primary li.active a {
-  -webkit-border-radius: 4px 4px 0 0;
-  -moz-border-radius: 4px 4px 0 0;
-  -ms-border-radius: 4px 4px 0 0;
   border-radius: 4px 4px 0 0;
 }
 table tr:hover td {
@@ -78,9 +75,6 @@ ul.action-links li a {
   color: #fff;
   text-decoration: none;
   line-height: 1.3em;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
   border-radius: 4px;
 }
 ul.action-links li a:before {
@@ -92,8 +86,6 @@ ul.action-links li a:before {
 }
 ul.action-links li a:hover {
   background-color: #7ec871;
-  -webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
   -ms-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -116,7 +108,7 @@ body.cke_editable p {
 .views-exposed-form {
   padding: 0 15px;
   margin-bottom: 15px;
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
 }
 input.form-submit,
 a.button:link,
@@ -129,16 +121,12 @@ a.button:visited {
   background: #0074bd;
   border: 2px solid #fff;
   6dc15f-webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
   border-radius: 4px;
 }
 input.form-submit:hover,
 a.button:link:hover,
 a.button:visited:hover {
   background-color: #0084d7;
-  -webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
   -ms-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -163,16 +151,12 @@ input[type=image]:hover,
 input[type=image]:active,
 input[type=image]:focus {
   background: transparent;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
   -ms-box-shadow: none;
   box-shadow: none;
 }
 input,
 textarea,
 select {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -186,7 +170,7 @@ select.form-select {
   font-family: 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 1em;
   background-color: #f2f2f2;
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
   border-top-color: #999;
   border-radius: 0;
 }
@@ -310,7 +294,7 @@ div.error {
 }
 .more-link a:hover,
 .more-help-link a:hover {
-  border-color: #cccccc;
+  border-color: #ccc;
 }
 .more-help-link a {
   background-position: 5px center;
@@ -319,15 +303,13 @@ div.error {
 ul.pager,
 .item-list ul.pager {
   padding: 4px;
-  border: 1px solid #cccccc;
+  border: 1px solid #ccc;
 }
 #admin-menu {
   background: #222;
   font-family: 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 16px;
   font-weight: 300;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
   box-shadow: none;
 }
 #admin-menu .dropdown .admin-menu-toolbar-category > a.active-trail {
@@ -337,14 +319,9 @@ ul.pager,
   background: #be4444 none;
 }
 .border-box {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
 }
 .transition {
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -ms-transition: all 0.3s;
   transition: all 0.3s;
 }
