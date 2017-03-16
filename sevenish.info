@@ -1,12 +1,35 @@
 name = Sevenish
-description = A child-theme of the famed <em>Seven</em> that is a bit prettier.
-version = 2.0
+description = A child-theme of the famed <em>Seven</em> that is a bit prettier. Now empowered by the LESS Drupal module.
+version = 2.1
 core = 7.x
 engine = phptemplate
 base theme = seven
 
 ; STYLESHEETS
-stylesheets[screen][] = sevenish.css
+stylesheets[screen][] = sevenish.less
+
+; LESS Vars
+less[vars][@font] = 'Helvetica Neue', Helvetica, sans-serif
+;less[vars][@pageMargin] = 20px
+;less[vars][@lineheight] = 1.3em
+
+less[vars][@color] = #000
+less[vars][@accent] = #397feb
+less[vars][@pop] = #da5a47
+less[vars][@pip] = #6dc15f
+
+less[vars][@gray] =  #333f4c
+less[vars][@graycontrast] =  lighten(@gray, 75%)
+
+less[vars][@linkcolor] = #344f6c
+
+less[vars][@linecolor] =  #ccc
+less[vars][@activeline] =  #e6e6e6
+
+less[vars][@screen] =  #f2f2f2
+
+;less[vars][@btnpadding] =  0.75em 1em
+;less[vars][@btnpaddingshrink] =  0.45em 1em
 
 ; REGIONS
 regions[content] = Content
@@ -18,3 +41,5 @@ regions_hidden[] = sidebar_first
 
 ; SETTINGS
 settings[shortcut_module_link] = 1
+settings[sevenish_externals_enabled] = 0
+settings[sevenish_externals] =
