@@ -8,6 +8,7 @@
 body {
   color: #000;
   font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-weight: 400;
   font-size: 15px;
   line-height: 1.3em;
   -webkit-font-smoothing: antialiased;
@@ -22,7 +23,7 @@ body {
 }
 #branding h1.page-title {
   color: #ffffff;
-  font-weight: bold;
+  font-weight: 600;
   line-height: 1.5em;
 }
 .breadcrumb a {
@@ -52,6 +53,22 @@ img {
 a {
   color: #344f6c;
 }
+table th,
+#system-themes-page h2,
+.theme-selector h3,
+h1#overlay-title {
+  font-weight: 400;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+legend,
+.theme-default h3 {
+  font-weight: 600;
+}
 ul.primary li a:link,
 ul.primary li a.active,
 ul.primary li a:active,
@@ -62,6 +79,7 @@ ul.primary li.active a {
   background-color: #52657a;
   border-width: 0;
   color: #e0e5ea;
+  font-weight: 600;
   border-radius: 0;
   transition: background-color 300ms ease-out;
 }
@@ -153,6 +171,7 @@ a.button:visited {
   left: -2px;
   padding: 0.75em 1em;
   font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-weight: 400;
   color: #fff;
   background: #397feb;
   border: 2px solid #fff;
@@ -284,7 +303,7 @@ div.description:before,
   color: #6dc15f;
   line-height: 1.4em;
   font-size: 0.9em;
-  font-weight: bold;
+  font-weight: 600;
 }
 div.status,
 div.warning,
@@ -303,7 +322,7 @@ div.messages a.closer {
   right: 0.6em;
   top: 0.3em;
   display: block;
-  font-weight: bold;
+  font-weight: 600;
   text-decoration: none;
 }
 div.messages ul {

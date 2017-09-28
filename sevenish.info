@@ -10,6 +10,8 @@ stylesheets[screen][] = sevenish.less
 
 ; LESS Vars
 less[vars][@font] = 'Helvetica Neue', Helvetica, sans-serif
+less[vars][@font-weight-normal] = 400
+less[vars][@font-weight-bold] = 600
 ;less[vars][@pageMargin] = 20px
 ;less[vars][@lineheight] = 1.3em
 
